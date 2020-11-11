@@ -38,10 +38,11 @@ app.get('/random-beers', (req, res) => {
   .getRandom()
   .then(randomBeerFromApi => {
     console.log("All the Random Beers from the API: ", randomBeerFromApi);
+    const oneBeer = randomBeerFromApi[0];
+    const props = {oneBeer};
+    console.log('oneBeer', oneBeer)
 
-    const data = {randomBeerFromApi};
-
-    res.render('Random-beers', data);
+    res.render('RandomBeer', props);
   })
   .catch(error => console.log(error));
   

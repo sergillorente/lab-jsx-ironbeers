@@ -1,6 +1,6 @@
 const React = require('react');
 
-const Layout = require('layout');
+const Layout = require('./Layout');
 
 function Home() {
 
